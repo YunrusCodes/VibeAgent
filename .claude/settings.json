@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$env:CLAUDE_PROJECT_DIR\\.claude\\hooks\\guidance-write-gate.ps1\"",
+            "timeout": 15,
+            "statusMessage": "guidance-write-gate 檢查中"
+          }
+        ]
+      }
+    ]
+  }
+}

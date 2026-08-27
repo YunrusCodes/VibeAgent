@@ -1,0 +1,9 @@
+# .claude/skills/ 下面是指向 Skills/ 的 junction 目錄連結，不是複本。
+# git 會穿過 junction 把同一批檔案再收一份，所以整個目錄不納入版控。
+# clone 之後請重建連結（PowerShell，於專案根目錄執行）：
+#   New-Item -ItemType Junction -Path .claude\skills\five-layer-agent  -Target Skills\five-layer-agent
+#   New-Item -ItemType Junction -Path .claude\skills\agent-composition -Target Skills\agent-composition
+.claude/skills/
+
+# 本機個人設定（settings.json 本身要進版控）
+.claude/settings.local.json
